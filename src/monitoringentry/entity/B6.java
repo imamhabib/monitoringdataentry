@@ -1,0 +1,99 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package monitoringentry.entity;
+
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ *
+ * @author Habib
+ */
+@Entity
+@Table(name = "b6")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "B6.findAll", query = "SELECT b FROM B6 b")})
+public class B6 implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    @Column(name = "nks")
+    private String nks;
+    @Lob
+    @Column(name = "catatan")
+    private String catatan;
+    @JoinColumn(name = "nks_b1", referencedColumnName = "nks")
+    @ManyToOne
+    private B1 nksB1;
+
+    public B6() {
+    }
+
+    public B6(String nks) {
+        this.nks = nks;
+    }
+
+    public String getNks() {
+        return nks;
+    }
+
+    public void setNks(String nks) {
+        this.nks = nks;
+    }
+
+    public String getCatatan() {
+        return catatan;
+    }
+
+    public void setCatatan(String catatan) {
+        this.catatan = catatan;
+    }
+
+    public B1 getNksB1() {
+        return nksB1;
+    }
+
+    public void setNksB1(B1 nksB1) {
+        this.nksB1 = nksB1;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (nks != null ? nks.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof B6)) {
+            return false;
+        }
+        B6 other = (B6) object;
+        if ((this.nks == null && other.nks != null) || (this.nks != null && !this.nks.equals(other.nks))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "pkl54.entity.B6[ nks=" + nks + " ]";
+    }
+    
+}
