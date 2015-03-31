@@ -49,6 +49,10 @@ public class B1Dao extends DaoService<B1> {
         return (Long) entity().createQuery("SELECT COUNT(b) from B1 b where b.cleanFlag=true").getSingleResult();
     }
     
+    public Long getCleanCountByKab(String kab){
+        return (Long) entity().createQuery("SELECT COUNT(b) FROM B1 b WHERE b.nks LIKE '"+kab+"%' AND b.cleanFlag=true").getSingleResult();
+    }
+    
     @Override
     public List<Object> getAll() {
         return entity().createQuery("Select b from B1 b").getResultList();
