@@ -39,6 +39,14 @@ public class MonitorPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        dataMasukPanel1 = new javax.swing.JPanel();
+        cleanDataPanel1 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         dataMasukPanel = new javax.swing.JPanel();
         cleanDataPanel = new javax.swing.JPanel();
@@ -47,16 +55,45 @@ public class MonitorPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
+        jPanel3.setLayout(new java.awt.BorderLayout());
+
+        jPanel4.setLayout(new java.awt.GridLayout(2, 0));
+
+        dataMasukPanel1.setLayout(new java.awt.BorderLayout());
+        jPanel4.add(dataMasukPanel1);
+
+        cleanDataPanel1.setLayout(new java.awt.BorderLayout());
+        jPanel4.add(cleanDataPanel1);
+        jPanel4.add(jPanel7);
+        jPanel4.add(jPanel8);
+
+        jPanel3.add(jPanel4, java.awt.BorderLayout.CENTER);
+
+        jPanel9.setPreferredSize(new java.awt.Dimension(10, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setText("MONITORING ENTRY DATA PKL 54 BIDANG EKONOMI");
+        jPanel9.add(jLabel2);
+
+        jPanel3.add(jPanel9, java.awt.BorderLayout.PAGE_START);
+
+        setOpaque(false);
         setLayout(new java.awt.BorderLayout());
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 0));
 
+        dataMasukPanel.setOpaque(false);
         dataMasukPanel.setLayout(new java.awt.BorderLayout());
         jPanel1.add(dataMasukPanel);
 
+        cleanDataPanel.setOpaque(false);
         cleanDataPanel.setLayout(new java.awt.BorderLayout());
         jPanel1.add(cleanDataPanel);
+
+        jPanel5.setOpaque(false);
         jPanel1.add(jPanel5);
+
+        jPanel6.setOpaque(false);
         jPanel1.add(jPanel6);
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -73,12 +110,20 @@ public class MonitorPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cleanDataPanel;
+    private javax.swing.JPanel cleanDataPanel1;
     private javax.swing.JPanel dataMasukPanel;
+    private javax.swing.JPanel dataMasukPanel1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 
     
