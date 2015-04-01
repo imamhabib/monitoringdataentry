@@ -8,7 +8,6 @@ package monitoringentry.chart.panel;
 import java.awt.Dimension;
 import monitoringentry.chart.CleanDataChart;
 import monitoringentry.chart.UploadedDataChart;
-import monitoringentry.chart.PerKabupatenChart;
 
 /**
  *
@@ -29,8 +28,6 @@ public class MonitorPanel extends javax.swing.JPanel {
         dataMasukPanel.add(new UploadedDataChart());
         cleanDataPanel.setPreferredSize(new Dimension(300, 300));
         cleanDataPanel.add(new CleanDataChart());
-        jPanel5.setPreferredSize(new Dimension(300, 300));
-        jPanel5.add(new PerKabupatenChart());
     }
 
     /**
