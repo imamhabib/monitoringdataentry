@@ -25,7 +25,6 @@ public class B1Dao extends DaoService<B1> {
         return B1DaoHolder.INSTANCE;
     }
 
-
     private static class B1DaoHolder {
 
         private static final B1Dao INSTANCE = new B1Dao();
@@ -48,11 +47,19 @@ public class B1Dao extends DaoService<B1> {
     public Long getCleanCount(){
         return (Long) entity().createQuery("SELECT COUNT(b) from B1 b where b.cleanFlag=true").getSingleResult();
     }
+
+    public Long getEntryCountByKec(String kec) {
+        return (Long) entity().createQuery("SELECT COUNT(b) FROM B1 b WHERE b.nks LIKE '"+kec+"%' AND b.statusEntry=true").getSingleResult();
+    }
     
     public Long getCleanCountByKab(String kab){
         return (Long) entity().createQuery("SELECT COUNT(b) FROM B1 b WHERE b.nks LIKE '"+kab+"%' AND b.cleanFlag=true").getSingleResult();
     }
     
+    public Long getCleanCountByKec(String kec) {
+        return (Long) entity().createQuery("SELECT COUNT(b) FROM B1 b WHERE b.nks LIKE '"+kec+"%' AND b.cleanFlag=true").getSingleResult();
+    }
+
     @Override
     public List<Object> getAll() {
         return entity().createQuery("Select b from B1 b").getResultList();
