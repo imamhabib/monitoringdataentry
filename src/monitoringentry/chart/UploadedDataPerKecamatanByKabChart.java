@@ -47,12 +47,12 @@ public class UploadedDataPerKecamatanByKabChart extends JPanel{
         Kecamatan kec;
         for(int i=0; i<listKec.size(); i++){
             kec = (Kecamatan) listKec.get(i);
-            double clean = B1Dao.getInstance().getEntryCountByKec(kec.getId());
+            double entry = B1Dao.getInstance().getEntryCountByKec(kec.getId());
             double total = B1Dao.getInstance().getByKec(kec.getId()).size();
-            double cp = clean/total;
-            double bcp = total-cp;
-            result.addValue(cp, "Sudah Dientry", kec.getNama());
-            result.addValue(bcp, "Belum Dientry", kec.getNama());
+            double ep = entry/total;
+            double bep = total-ep;
+            result.addValue(ep, "Sudah Dientry", kec.getNama());
+            result.addValue(bep, "Belum Dientry", kec.getNama());
         }
         return result;
     }
