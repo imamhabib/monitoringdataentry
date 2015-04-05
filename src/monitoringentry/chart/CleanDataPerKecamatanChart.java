@@ -43,7 +43,7 @@ public class CleanDataPerKecamatanChart extends JPanel{
     private PieDataset createDataset() {
         DefaultPieDataset dataset = new DefaultPieDataset();
         long dataTotal = B1Dao.getInstance().getByKec(kec).size();
-        long dataEntry = B1Dao.getInstance().getEntryCountByKec(kec);
+        long dataEntry = B1Dao.getInstance().getCleanCountByKec(kec);
         dataset.setValue("Clean", dataEntry);
         dataset.setValue("Belum Clean", (dataTotal - dataEntry));
         return dataset;
